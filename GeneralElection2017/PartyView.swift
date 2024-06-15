@@ -4,7 +4,7 @@ import SwiftUI
 struct PartyView: View {
     let candidate: Candidate
     let partyMapping: PartyMapping
-    
+
     var agreement: Double {
         partyMapping.ratio
     }
@@ -38,7 +38,7 @@ struct PartyView: View {
 #if DEBUG
 #Preview {
     VStack {
-        ForEach([0, 0.25, 0.75, 1], id: \.self) { agreement in
+        ForEach([0, 0.25, 0.75, 1], id: \.self) { _ in
             PartyView(candidate: .mock(),
                       partyMapping: PartyMapping(likedPolicies: [], dislikedPolicies: []))
         }

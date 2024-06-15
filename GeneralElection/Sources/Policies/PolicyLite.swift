@@ -6,13 +6,12 @@ public struct PolicyLite: Codable {
     public let text: String
     public let additionalInfo: String?
 
-
     public let type: PolicyType
     public let parties: [Party]
-    
+
     public init(id: Int,
                 text: String,
-                additionalInfo: String? = nil, 
+                additionalInfo: String? = nil,
                 type: PolicyType,
                 parties: [Party]) {
         self.id = id

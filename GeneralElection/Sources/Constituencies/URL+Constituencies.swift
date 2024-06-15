@@ -5,7 +5,7 @@ extension URL {
         URL(string: "https://www.theyworkforyou.com")!
             .appendingPathComponent("api")
     }
-    
+
     static func constituency(apiKey: String, postcode: String) -> URL {
         guard var components = URLComponents(url: theyWorkForYou.appendingPathComponent("getConstituency"),
                                              resolvingAgainstBaseURL: false) else {

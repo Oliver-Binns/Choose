@@ -1,5 +1,5 @@
-import XCTest
 @testable import Policies
+import XCTest
 
 final class PolicyTypeTests: XCTestCase {
     func testImage() throws {

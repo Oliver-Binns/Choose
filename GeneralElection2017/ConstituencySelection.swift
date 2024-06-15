@@ -1,12 +1,12 @@
-import CoreLocationUI
 import Constituencies
+import CoreLocationUI
 import SwiftData
 import SwiftUI
 
 struct ConstituencySelection: View {
     @Environment(ConstituencyViewModel.self)
     private var viewModel
-    
+
     @State
     private var selectedConstituency: Constituency?
 
@@ -45,7 +45,6 @@ struct ConstituencySelection: View {
                         .tag(constituency as Constituency?)
                 }
             } label: {
-
             }.pickerStyle(.wheel)
 
             Button {

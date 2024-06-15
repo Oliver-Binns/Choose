@@ -4,10 +4,10 @@ import SwiftUI
 
 struct PolicyView: View {
     let policy: Policy
-    
+
     @Environment(MatchViewModel<Policy>.self)
     private var matchService
-    
+
     @State private var offset = CGSize.zero
 
     var opacity: Double {

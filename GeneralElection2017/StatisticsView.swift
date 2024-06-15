@@ -6,7 +6,7 @@ import SwiftUI
 struct Item: Identifiable {
     let type: PolicyType
     let value: Int
-    
+
     var id: String {
         type.rawValue
     }
@@ -15,7 +15,7 @@ struct Item: Identifiable {
 struct StatisticsView: View {
     let opinion: Opinion
     let data: [PolicyType: Int]
-    
+
     var items: [Item] {
         data.map {
             Item(type: $0.key, value: $0.value)
@@ -25,7 +25,7 @@ struct StatisticsView: View {
     var body: some View {
         VStack {
             Text("You \(opinion.rawValue) on")
-            
+
             if items.isEmpty {
                 ContentUnavailableView("Swipe on policies to see where you \(opinion.rawValue).",
                                        systemImage: "hand.draw")
@@ -45,7 +45,7 @@ struct StatisticsView: View {
                         )
                     )
                 }
-                
+
                 .chartForegroundStyleScale(
                     domain: data.keys.map(\.rawValue),
                     range: data.keys.map { Color($0.colour) }
@@ -66,7 +66,7 @@ struct StatisticsView: View {
             .economy: 2,
             .education: 9
         ])
-        
+
         StatisticsView(opinion: .agree, data: [:])
     }
 }

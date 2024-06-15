@@ -6,10 +6,10 @@ import SwiftUI
 struct MainView: View {
     @Environment(ConstituencyViewModel.self)
     private var constituencyService
-    
+
     @Environment(MatchViewModel<Policy>.self)
     private var matchService
-    
+
     @MainActor
     private var navigationTitle: String {
         constituencyService.selectedConstituency?.name ?? "Constituency"
