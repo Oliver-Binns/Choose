@@ -28,6 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ConstituenciesTests"
+               BuildableName = "ConstituenciesTests"
+               BlueprintName = "ConstituenciesTests"
+               ReferencedContainer = "container:GeneralElection">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "PartiesTests"
+               BuildableName = "PartiesTests"
+               BlueprintName = "PartiesTests"
+               ReferencedContainer = "container:GeneralElection">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "PoliciesTests"
+               BuildableName = "PoliciesTests"
+               BlueprintName = "PoliciesTests"
+               ReferencedContainer = "container:GeneralElection">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

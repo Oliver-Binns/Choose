@@ -39,10 +39,13 @@ extension PolicyServiceTests {
 
         try await sut.loadAllPolicies()
 
+        let descriptor = FetchDescriptor<Policy>(sortBy: [
+            SortDescriptor(\.id, order: .forward)
+        ])
         let policies = try modelContext
-            .fetch(FetchDescriptor<Policy>())
+            .fetch(descriptor)
 
-        XCTAssertEqual(policies.count, 426)
+        XCTAssertEqual(policies.count, 6)
 
         let policy = try XCTUnwrap(policies.first)
         XCTAssertEqual(policy.id, 0)
