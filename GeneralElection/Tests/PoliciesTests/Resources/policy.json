@@ -8,7 +8,7 @@
     },
     {
         "text":"Leave both the EU Single Market and Customs Union.",
-        "parties":["UKIP","Conservatives"],
+        "parties":["Conservatives"],
         "image":"Foreign Affairs",
         "id":1
 
@@ -22,19 +22,19 @@
     },
     {
         "text":"Protect the rights of EU and UK citizens living abroad after Brexit.",
-        "parties":["Liberal Democrats","Green","Plaid Cymru","UKIP","SNP"],
+        "parties":["Liberal Democrats","Green","Plaid Cymru","SNP"],
         "image":"Foreign Affairs",
         "id":3
     },
     {
         "text":"Continue to spend 0.7% of national income on overseas aid.",
-        "parties":["Liberal Democrats","Conservatives","Labour","Plaid Cymru","UKIP"],
+        "parties":["Liberal Democrats","Conservatives","Labour","Plaid Cymru"],
         "image":"Foreign Affairs",
         "id":4
     },
     {
         "text":"Reduce overseas aid spending from 0.7 to 0.2% of GDP.",
-        "parties":["UKIP"],
+        "parties":["Reform UK"],
         "image":"Foreign Affairs",
         "id":5
     }
