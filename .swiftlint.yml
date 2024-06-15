@@ -1,0 +1,11 @@
+identifier_name:
+  excluded: # excluded via string array
+    - id
+    - x
+    - y
+    - up
+    - ad
+force_try:
+  severity: warning
+force_cast:
+  severity: warning

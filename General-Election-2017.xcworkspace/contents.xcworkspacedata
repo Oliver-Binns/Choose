@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DataFormatter">
+   </FileRef>
+   <FileRef
+      location = "group:GeneralElection">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/oliver/General-Election-2017/GeneralElection.xcodeproj">
+   </FileRef>
+</Workspace>
