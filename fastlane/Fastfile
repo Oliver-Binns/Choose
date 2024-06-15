@@ -10,4 +10,12 @@ platform :ios do
   lane :test do
     scan
   end
+
+  desc "Deploy to App Store Connect"
+  lane :deploy do |options|
+    if ENV["BUILD_NUMBER"].nil? || ENV["BUILD_NUMBER"].empty?
+      UI.important 'nothing to deploy'
+      next
+    end
+  end
 end
