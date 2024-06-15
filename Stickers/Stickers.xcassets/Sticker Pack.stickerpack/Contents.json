@@ -17,9 +17,6 @@
       "filename" : "libdem.sticker"
     },
     {
-      "filename" : "reform.sticker"
-    },
-    {
       "filename" : "snp.sticker"
     },
     {
@@ -27,6 +24,9 @@
     },
     {
       "filename" : "cymru.sticker"
+    },
+    {
+      "filename" : "reform.sticker"
     }
   ]
 }
