@@ -1,5 +1,10 @@
 default_platform(:ios)
 
+
+if is_ci
+  xcode_select("/Applications/Xcode_15.4.app")
+end 
+
 platform :ios do
   desc "Build and test app"
   lane :test do
