@@ -7,7 +7,7 @@ public struct Statistics<Category: Hashable> {
     public var alignment: Double {
         let agreeCount = Double(agree.values.reduce(0, +))
         let disagreeCount = Double(disagree.values.reduce(0, +))
-        
+
         return agreeCount / (agreeCount + disagreeCount)
     }
 

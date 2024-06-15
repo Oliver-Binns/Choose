@@ -7,7 +7,7 @@ let package = Package(
     name: "DataFormatting",
     platforms: [.iOS(.v17), .macCatalyst(.v17), .macOS(.v14), .visionOS(.v1)],
     products: [
-        .executable(name: "DataFormatting", targets: ["DataFormatting"]),
+        .executable(name: "DataFormatting", targets: ["DataFormatting"])
     ],
     dependencies: [
         .package(url: "https://github.com/swiftcsv/SwiftCSV.git", from: "0.8.0"),

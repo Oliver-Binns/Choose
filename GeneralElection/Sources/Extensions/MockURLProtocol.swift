@@ -4,11 +4,11 @@ import Foundation
 public final class MockURLProtocol: URLProtocol {
     public static var requestHandler: ((URLRequest) throws -> (HTTPURLResponse, Data?))?
 
-    public override class func canInit(with request: URLRequest) -> Bool {
+    public override static func canInit(with request: URLRequest) -> Bool {
         true
     }
 
-    public override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+    public override static func canonicalRequest(for request: URLRequest) -> URLRequest {
         request
     }
 

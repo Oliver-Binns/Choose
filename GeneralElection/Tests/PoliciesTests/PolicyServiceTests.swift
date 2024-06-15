@@ -10,11 +10,11 @@ final class PolicyServiceTests: XCTestCase {
 
     override func setUpWithError() throws {
         super.setUp()
-        
+
         let modelConfiguration = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: Policy.self, configurations: modelConfiguration)
         modelContext = ModelContext(container)
-        
+
         let config = URLSessionConfiguration.default
         config.protocolClasses = [
             MockURLProtocol.self
@@ -38,12 +38,12 @@ extension PolicyServiceTests {
         }
 
         try await sut.loadAllPolicies()
-        
+
         let policies = try modelContext
             .fetch(FetchDescriptor<Policy>())
-        
+
         XCTAssertEqual(policies.count, 426)
-        
+
         let policy = try XCTUnwrap(policies.first)
         XCTAssertEqual(policy.id, 0)
         XCTAssertEqual(policy.text,

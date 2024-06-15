@@ -7,10 +7,9 @@ public final class Policy {
     public let text: String
     public let additionalInfo: String?
 
-
     public let type: PolicyType
     public let parties: [Party]
-    
+
     public init(id: Int,
                 text: String,
                 type: PolicyType,

@@ -8,6 +8,6 @@
       location = "group:GeneralElection">
    </FileRef>
    <FileRef
-      location = "group:/Users/oliver/General-Election-2017/GeneralElection.xcodeproj">
+      location = "group:GeneralElection.xcodeproj">
    </FileRef>
 </Workspace>

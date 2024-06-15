@@ -4,7 +4,7 @@ import SwiftUI
 struct ContentView: View {
     @Environment(ConstituencyViewModel.self)
     private var constituencyService
-    
+
     @MainActor
     private var isFlipped: Binding<Bool> {
         .init(get: {

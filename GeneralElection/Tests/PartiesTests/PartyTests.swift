@@ -1,5 +1,5 @@
-import XCTest
 @testable import Parties
+import XCTest
 
 final class PartyTests: XCTestCase {
     func testColour() throws {

@@ -9,33 +9,33 @@ let package = Package(
         .library(name: "Parties", targets: ["Parties"]),
         .library(name: "Policies", targets: ["Policies"]),
         .library(name: "Constituencies", targets: ["Constituencies"]),
-        
+
         .library(name: "Choose", targets: ["Choose"])
     ],
     targets: [
-        .target(name: "Parties", 
+        .target(name: "Parties",
                 resources: [.process("Resources")]),
-        .testTarget(name: "PartiesTests", 
+        .testTarget(name: "PartiesTests",
                     dependencies: ["Parties"]),
-        
-        .target(name: "Constituencies", 
+
+        .target(name: "Constituencies",
                 dependencies: ["Parties"],
                 resources: [.process("Resources")]),
-        
+
         .testTarget(name: "ConstituenciesTests",
                     dependencies: ["Constituencies", "Extensions"],
                     resources: [.process("Resources")]),
-        
+
         .target(name: "Policies",
                 dependencies: ["Parties"],
                 resources: [.process("Resources")]),
-        
+
         .testTarget(name: "PoliciesTests",
                     dependencies: ["Policies", "Extensions"],
                     resources: [.process("Resources")]),
-        
+
         .target(name: "Choose", dependencies: ["Policies"]),
-        
+
         .target(name: "Extensions")
     ]
 )
