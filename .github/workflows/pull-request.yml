@@ -36,6 +36,11 @@ jobs:
           brew install swiftlint
           swiftlint --strict
           
+      - name: Export API Key
+        run: |
+          ls
+          touch ../GeneralElection.xcconfig
+          
       - name: Run Automated Tests
         run: |
           fastlane test
