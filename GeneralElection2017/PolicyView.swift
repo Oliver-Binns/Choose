@@ -85,8 +85,8 @@ struct PolicyView: View {
                         Button {
                             isShowingAdditionalInfo.toggle()
                         } label: {
-                            Label("Show Additional Info",
-                                  systemImage: "info.circle.fill")
+                            Label(isShowingAdditionalInfo ? "Hide" : "Show" + "Additional Info",
+                                  systemImage: isShowingAdditionalInfo ? "arrow.uturn.left.circle.fill" : "info.circle.fill")
                             .labelStyle(.iconOnly)
                         }
                     }
