@@ -30,7 +30,7 @@ struct PartyMapping {
     var ratio: Double {
         let likedCount = Double(agreement.count)
         let dislikedCount = Double(disagreement.count)
-        return likedCount / (likedCount + dislikedCount)
+        return likedCount / max(likedCount + dislikedCount, .leastNonzeroMagnitude)
     }
 }
 
