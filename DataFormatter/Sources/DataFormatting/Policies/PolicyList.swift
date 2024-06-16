@@ -4,7 +4,7 @@ import Policies
 
 typealias Policy = PolicyLite
 
-// swiftlint:disable line_length
+// swiftlint:disable line_length file_length
 let policies: [PolicyLite] = [
     Policy(id: "4303665D-F4B0-41A5-ABB3-790677B5DD7E",
            text: "Cut national insurance by 2p",
@@ -87,6 +87,9 @@ let policies: [PolicyLite] = [
 
     Policy(id: "60C25622-8440-4B1E-8936-B44BD7B276DE",
            text: "Deport illegal immigrants to Rwanda",
+           additionalInfo: """
+           The Rwanda deportation scheme involves the UK government sending asylum seekers to Rwanda for processing and settlement, aiming to deter illegal immigration and human trafficking.
+           """,
            type: .economy,
            parties: [.conservatives]),
 
@@ -294,6 +297,129 @@ let policies: [PolicyLite] = [
     Policy(id: "E8BDA16F-EDD9-482F-9528-3F2A21920B89",
            text: "Count Binface to represent the uk at eurovision",
            type: .foreignAffairs,
-           parties: [.binface])
+           parties: [.binface]),
+
+    Policy(id: "19A4E401-A385-49B0-B461-ACDE5F559779",
+           text: "Abolish IR35 rules for contractors",
+           type: .economy,
+           parties: [.reform]),
+
+    Policy(id: "6B4C3C36-9A1B-44F0-9A5E-AF0C8821832A",
+           text: "Leave the European Convention on Human Rights",
+           type: .rights,
+           parties: [.reform]),
+
+    Policy(id: "FA530698-6849-481D-9897-917535310B76",
+           text: "Reduce the main corporation tax rate from 25% to 20%",
+           type: .economy,
+           parties: [.reform]),
+
+    Policy(id: "E7875BF4-E391-4519-97F8-35509F7A6980",
+           text: "All frontline NHS and social care staff to pay zero basic rate tax for 3 years",
+           type: .healthSocialCare,
+           parties: [.reform]),
+
+    Policy(id: "73F85781-5483-4C41-8326-BC2D17282B73",
+           text: "Give patients vouchers for private healthcare if they can't see a GP within 3 days",
+           type: .healthSocialCare,
+           parties: [.reform]),
+
+    Policy(id: "D7C61AA0-628A-408F-BBE7-7EBC4CDA144B",
+           text: "Scrap Net Zero targets and Related Subsidies",
+           type: .environment,
+           parties: [.reform]),
+
+    Policy(id: "7A80AC76-A3F5-47BA-B8DC-A0BB55C75421",
+           text: "Scrap interest on student loans and extend loan repayment periods to 45 years",
+           type: .education,
+           parties: [.reform]),
+
+    Policy(id: "C417DD41-636D-4124-BAC7-C94B063F2593",
+           text: "Ban transgender ideology in primary and secondary schools",
+           type: .education,
+           parties: [.reform]),
+
+    Policy(id: "F4C75FE2-AEBC-43AB-81D9-67F90CD9D8E1",
+           text: "Ban critical race theory in primary and secondary schools",
+           type: .education,
+           parties: [.reform]),
+
+    Policy(id: "CC314C6D-447B-4F82-B649-34AFE27CE13B",
+           text: "Abandon the Windsor Framework",
+           additionalInfo: """
+           The Windsor Framework simplifies trade rules between Northern Ireland and the rest of the UK while preserving Northern Ireland's access to the EU market.
+           """,
+           type: .foreignAffairs,
+           parties: [.reform]),
+
+    Policy(id: "3B4248A4-5DDE-4A87-9C14-8CAE6395BFF8",
+           text: "Mandate single sex spaces",
+           additionalInfo: "Public toilets and changing areas must provide single sex facilities, including in schools.",
+           type: .foreignAffairs,
+           parties: [.reform]),
+
+    Policy(id: "3473F2D0-0101-4610-B521-DC670A4AB00C",
+           text: "Ban all ULEZ and Low Traffic Neighbourhoods",
+           type: .foreignAffairs,
+           parties: [.reform]),
+
+    Policy(id: "F15F3590-1202-4C2E-9776-7F2C0A9DA411",
+           text: "Stop postal voting except for the elderly, disabled or those who can’t leave their homes.",
+           type: .constitutional,
+           parties: [.reform]),
+
+    Policy(id: "5D70A479-5519-4F4D-97F8-E9F4408F4F8E",
+           text: "Introduce proportional representation voting for the House of Commons",
+           additionalInfo: """
+           Proportional representation allocates legislative seats based on vote percentages, aiming for fairness, but it can lead to unstable coalition governments.
+           """,
+           type: .constitutional,
+           parties: [.reform]),
+
+    Policy(id: "73947F6B-A904-4667-AD25-D8C06940513F",
+           text: "Keep the corporation tax rate at 25%",
+           type: .economy,
+           parties: [.labour, .conservatives]),
+
+    Policy(id: "4BBF96B4-0EC6-43F4-8328-BF920C77FE5F",
+           text: "Double the number of NHS CT and MRI scanners",
+           type: .healthSocialCare,
+           parties: [.labour]),
+
+    Policy(id: "69A20F2D-E630-4594-8D02-6AF1D12AA2F3",
+           text: "Free breakfast clubs in every primary school",
+           type: .education,
+           parties: [.labour]),
+
+    Policy(id: "E64EE420-506B-4FF7-B96E-9E1741822213",
+           text: "Apply VAT and business rates to private school fees",
+           type: .education,
+           parties: [.labour]),
+
+    Policy(id: "AE7781B9-AE25-429A-91E7-0EE83345054E",
+           text: "Scrap the Rwanda deportation scheme",
+           additionalInfo: """
+           The Rwanda deportation scheme involves the UK government sending asylum seekers to Rwanda for processing and settlement, aiming to deter illegal immigration and human trafficking.
+           """,
+           type: .economy,
+           parties: [.labour]),
+
+    Policy(id: "06197729-1718-4F9E-9DB3-8BC010624077",
+           text: "Invest £855m in HMRC to reduce tax avoidance",
+           type: .economy,
+           parties: [.labour]),
+
+    Policy(id: "5B258ACA-82EA-497D-8338-F0CDB3D0FFB9",
+           text: "Open an additional 3,000 nurseries",
+           type: .families,
+           parties: [.labour]),
+
+    Policy(id: "A87B3138-55B7-4B83-B32C-5644588422BB",
+           text: "Abolish Section 21 ‘no fault’ evictions",
+           additionalInfo: """
+           Section 21 allows landlords in England and Wales to evict tenants without providing a reason.
+           """,
+           type: .rights,
+           parties: [.labour])
 ].shuffled()
-// swiftlint:enable line_length
+// swiftlint:enable line_length file_length
