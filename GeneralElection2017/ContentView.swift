@@ -4,7 +4,7 @@ import SwiftUI
 struct ContentView: View {
     @Environment(ConstituencyViewModel.self)
     private var constituencyService
-    
+
     @AppStorage("OnboardingComplete")
     private var onboardingComplete: Bool = false
 
