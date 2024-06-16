@@ -14,6 +14,8 @@ struct PolicyView: View {
         3 - Double(abs(offset.distance / 100))
     }
 
+    @State private var isShowingAdditionalInfo = false
+
     @MainActor
     var drag: some Gesture {
         DragGesture()
@@ -49,16 +51,54 @@ struct PolicyView: View {
         }
     }
 
+    var additionalInfoLabel: String {
+        isShowingAdditionalInfo ? "Hide" : "Show" + "Additional Info"
+    }
+
+    var additionalInfoImage: String {
+        isShowingAdditionalInfo ? "arrow.uturn.left.circle.fill" : "info.circle.fill"
+    }
+
     var body: some View {
         ZStack {
-            Text(policy.text)
-                .multilineTextAlignment(.center)
+            FlippableCard(isFlipped: $isShowingAdditionalInfo) {
+                Text(policy.text)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+            } back: {
+                if let info = policy.additionalInfo {
+                    Text(info)
+                        .multilineTextAlignment(.center)
+                        .font(.headline)
+                        .padding(32)
+                        .foregroundColor(.white)
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.black.opacity(0.5))
+
+            if policy.additionalInfo != nil {
+                VStack(alignment: .trailing) {
+                    Spacer()
+                    HStack {
+                        Spacer()
+
+                        Button {
+                            isShowingAdditionalInfo.toggle()
+                        } label: {
+                            Label(additionalInfoLabel,
+                                  systemImage: additionalInfoImage)
+                            .labelStyle(.iconOnly)
+                        }
+                    }
+                }
                 .padding()
-                .font(.largeTitle)
-                .fontWeight(.bold)
+                .buttonStyle(.plain)
                 .foregroundColor(.white)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(.black.opacity(0.5))
+            }
 
             Rectangle()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
