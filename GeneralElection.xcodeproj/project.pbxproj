@@ -31,6 +31,7 @@
 		A702F9272BEAD9290026AD40 /* Policies in Frameworks */ = {isa = PBXBuildFile; productRef = A702F9262BEAD9290026AD40 /* Policies */; };
 		A72382451EDB10EB0089E2F2 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72382441EDB10EB0089E2F2 /* Stickers.xcassets */; };
 		A72382491EDB10EB0089E2F2 /* Stickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A72382421EDB10EB0089E2F2 /* Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A75D6CD42C1E737D00AB4432 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D6CD32C1E737D00AB4432 /* OnboardingPage.swift */; };
 		A793833E2C1DC4B6004BAF79 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793833D2C1DC4B6004BAF79 /* OnboardingView.swift */; };
 		A7DEF5751ED373E40095C042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7DEF5731ED373E40095C042 /* Main.storyboard */; };
 		A7DEF5771ED373E40095C042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DEF5761ED373E40095C042 /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		A72382421EDB10EB0089E2F2 /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72382441EDB10EB0089E2F2 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		A72382461EDB10EB0089E2F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A75D6CD32C1E737D00AB4432 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		A793833D2C1DC4B6004BAF79 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A7DEF56C1ED373E30095C042 /* Election 24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Election 24.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DEF5741ED373E40095C042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				A793833D2C1DC4B6004BAF79 /* OnboardingView.swift */,
+				A75D6CD32C1E737D00AB4432 /* OnboardingPage.swift */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				07CDB99629E478B300F32B0C /* PartyView.swift in Sources */,
 				07CDB99429E4757A00F32B0C /* Policy+Preview.swift in Sources */,
 				078E6EF02A2CE6EF00C7DF98 /* Candidate+Preview.swift in Sources */,
+				A75D6CD42C1E737D00AB4432 /* OnboardingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
