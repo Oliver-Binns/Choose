@@ -13,7 +13,7 @@ struct PolicyView: View {
     var opacity: Double {
         3 - Double(abs(offset.distance / 100))
     }
-    
+
     @State private var isShowingAdditionalInfo = false
 
     @MainActor
@@ -51,19 +51,23 @@ struct PolicyView: View {
         }
     }
 
+    var additionalInfoLabel: String {
+        isShowingAdditionalInfo ? "Hide" : "Show" + "Additional Info"
+    }
+
+    var additionalInfoImage: String {
+        isShowingAdditionalInfo ? "arrow.uturn.left.circle.fill" : "info.circle.fill"
+    }
+
     var body: some View {
         ZStack {
             FlippableCard(isFlipped: $isShowingAdditionalInfo) {
-                
                 Text(policy.text)
                     .multilineTextAlignment(.center)
                     .padding()
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                
-                
-                
             } back: {
                 if let info = policy.additionalInfo {
                     Text(info)
@@ -75,18 +79,18 @@ struct PolicyView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.black.opacity(0.5))
-            
+
             if policy.additionalInfo != nil {
                 VStack(alignment: .trailing) {
                     Spacer()
                     HStack {
                         Spacer()
-                        
+
                         Button {
                             isShowingAdditionalInfo.toggle()
                         } label: {
-                            Label(isShowingAdditionalInfo ? "Hide" : "Show" + "Additional Info",
-                                  systemImage: isShowingAdditionalInfo ? "arrow.uturn.left.circle.fill" : "info.circle.fill")
+                            Label(additionalInfoLabel,
+                                  systemImage: additionalInfoImage)
                             .labelStyle(.iconOnly)
                         }
                     }
@@ -95,7 +99,7 @@ struct PolicyView: View {
                 .buttonStyle(.plain)
                 .foregroundColor(.white)
             }
-            
+
             Rectangle()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .foregroundColor(opinionColour)
