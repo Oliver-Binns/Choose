@@ -52,6 +52,6 @@ final actor PolicyService: ModelActor {
     public func loadAllPolicies() async throws {
         try loadFromFile()
         let (data, _) = try await session.data(from: .policies)
-        try loadModels(from: data)
+        //try loadModels(from: data)
     }
 }

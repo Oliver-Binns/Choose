@@ -4,6 +4,9 @@ import SwiftUI
 struct ContentView: View {
     @Environment(ConstituencyViewModel.self)
     private var constituencyService
+    
+    @AppStorage("OnboardingComplete")
+    private var onboardingComplete: Bool = false
 
     @MainActor
     private var isFlipped: Binding<Bool> {
@@ -18,8 +21,13 @@ struct ContentView: View {
         } else {
             MainView().sheet(isPresented: isFlipped) {
                 NavigationStack {
-                    ConstituencySelection()
-                        .navigationTitle("Select Constituency")
+                    OnboardingView()
+                        .navigationDestination(isPresented: $onboardingComplete) {
+                            ConstituencySelection()
+                                .navigationTitle("Select Constituency")
+                                .navigationBarTitleDisplayMode(.large)
+                                .navigationBarBackButtonHidden(true)
+                        }
                 }
                 .interactiveDismissDisabled()
             }
