@@ -76,7 +76,10 @@ platform :ios do
 
       upload_to_testflight(
         skip_submission: true,
-        app_platform: "ios"
+        app_platform: "ios",
+        distribute_external: true,
+        groups: "Core Group",
+        changelog: last_git_commit[:message]
       )
     ensure
       delete_keychain(name: keychain_name)
