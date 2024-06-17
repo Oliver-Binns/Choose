@@ -1,5 +1,5 @@
-import Parties
 import Foundation
+import Parties
 import Policies
 
 typealias Policy = PolicyLite
