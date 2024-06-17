@@ -8,7 +8,8 @@ struct Policies: ParsableCommand {
     private var output: String = "policy-data.json"
 
     func run() throws {
-        let path = FileManager.default.homeDirectoryForCurrentUser.path
+        let path = FileManager.default.currentDirectoryPath
+        print("path", path)
         let url = URL(fileURLWithPath: path)
             .appendingPathComponent(output)
 

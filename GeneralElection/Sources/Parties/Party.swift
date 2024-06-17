@@ -12,6 +12,7 @@ public enum Party: String {
     case green
     case snp
     case plaidCymru
+    case binface
 }
 
 extension Party: CaseIterable { }
@@ -21,6 +22,8 @@ extension Party: Equatable { }
 extension Party: RawRepresentable {
     public var rawValue: String {
         switch self {
+        case .binface:
+            return "Count Binface"
         case .reform:
             return "Reform UK"
         case .conservatives:
@@ -47,6 +50,9 @@ extension Party: RawRepresentable {
         case "Conservative and Unionist Party",
              "Conservatives":
             self = .conservatives
+        case "Count Binface Party",
+             "Count Binface":
+            self = .binface
         case "Labour Party",
              "Labour and Co-operative Party",
             "Labour":
