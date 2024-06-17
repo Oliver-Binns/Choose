@@ -28,14 +28,20 @@ final actor PolicyService: ModelActor {
     }
 
     private func loadModels(from data: Data) throws {
+        let decoder = JSONDecoder()
+        let policies = try decoder.decode([PolicyLite].self, from: data)
+            .map(Policy.init)
+
+        guard !policies.isEmpty else {
+            // only update stored policies if we have new ones to replace with
+            return
+        }
+
         try modelContext.delete(model: Policy.self)
 
-        let decoder = JSONDecoder()
-        try decoder.decode([PolicyLite].self, from: data)
-            .map(Policy.init)
-            .forEach {
-                modelContext.insert($0)
-            }
+        policies.forEach {
+            modelContext.insert($0)
+        }
 
         try modelContext.save()
     }
