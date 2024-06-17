@@ -3,39 +3,39 @@
         "text":"Keep the UK in the EU Single Market and Customs Union.",
         "parties":["Liberal Democrats","SNP"],
         "image":"Foreign Affairs",
-        "id":0
+        "id":"4303665D-F4B0-41A5-ABB3-790677B5DD7E"
 
     },
     {
         "text":"Leave both the EU Single Market and Customs Union.",
         "parties":["Conservatives"],
         "image":"Foreign Affairs",
-        "id":1
+        "id":"40FF1752-0E42-4073-860D-0DA17CF55787"
 
     },
     {
         "text":"Hold a referendum on the final deal for Exiting the EU",
         "parties":["Liberal Democrats","Green"],
         "image":"Foreign Affairs",
-        "id":2
+        "id":"652ED9B3-F747-47A0-AD18-F3742399769F"
 
     },
     {
         "text":"Protect the rights of EU and UK citizens living abroad after Brexit.",
         "parties":["Liberal Democrats","Green","Plaid Cymru","SNP"],
         "image":"Foreign Affairs",
-        "id":3
+        "id":"84CD663D-DBD7-4ED2-BCF2-75D5FC06FA7B"
     },
     {
         "text":"Continue to spend 0.7% of national income on overseas aid.",
         "parties":["Liberal Democrats","Conservatives","Labour","Plaid Cymru"],
         "image":"Foreign Affairs",
-        "id":4
+        "id":"76F0D4BF-B285-464E-8966-A042CFDEB86E"
     },
     {
         "text":"Reduce overseas aid spending from 0.7 to 0.2% of GDP.",
         "parties":["Reform UK"],
         "image":"Foreign Affairs",
-        "id":5
+        "id":"E147D3F7-5275-40A9-B866-3FB75F7B033E"
     }
 ]

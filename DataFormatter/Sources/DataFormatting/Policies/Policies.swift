@@ -12,8 +12,6 @@ struct Policies: ParsableCommand {
         let url = URL(fileURLWithPath: path)
             .appendingPathComponent(output)
 
-        print(url)
-
         let encoder = JSONEncoder()
         try encoder
             .encode(policies)

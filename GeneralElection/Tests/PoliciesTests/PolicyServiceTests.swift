@@ -48,10 +48,10 @@ extension PolicyServiceTests {
         XCTAssertEqual(policies.count, 6)
 
         let policy = try XCTUnwrap(policies.first)
-        XCTAssertEqual(policy.id, 0)
+        XCTAssertEqual(policy.id, UUID(uuidString: "40FF1752-0E42-4073-860D-0DA17CF55787"))
         XCTAssertEqual(policy.text,
-                       "Keep the UK in the EU Single Market and Customs Union.")
-        XCTAssertEqual(policy.parties, [.liberalDemocrats, .snp])
+                       "Leave both the EU Single Market and Customs Union.")
+        XCTAssertEqual(policy.parties, [.conservatives])
         XCTAssertEqual(policy.type, .foreignAffairs)
     }
 
