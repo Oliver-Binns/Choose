@@ -15,7 +15,7 @@ struct Policies: ParsableCommand {
         (0...20).forEach { _ in
             print(UUID().uuidString)
         }
-        
+
         let encoder = JSONEncoder()
         try encoder
             .encode(policies)

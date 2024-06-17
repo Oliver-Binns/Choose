@@ -71,6 +71,6 @@ extension PolicyServiceTests {
         let policies = try modelContext
             .fetch(descriptor)
 
-        XCTAssertEqual(policies.count, 54)
+        XCTAssertEqual(policies.count, 88)
     }
 }
