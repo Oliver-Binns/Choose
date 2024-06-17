@@ -169,6 +169,129 @@ let policies: [PolicyLite] = [
     Policy(id: 29,
            text: "Abolish Stamp Duty for homes up to £750,000",
            type: .economy,
-           parties: [.reform])
+           parties: [.reform]),
+
+    Policy(id: 30,
+           text: "All water bosses to take a dip in British Rivers, to see how they like it",
+           type: .environment,
+           parties: [.binface]),
+
+    Policy(id: 31,
+           text: "National Service to be introduced for all former prime ministers",
+           type: .rights,
+           parties: [.binface]),
+
+    Policy(id: 32,
+           text: "WiFi on trains that works",
+           type: .infrastructure,
+           parties: [.binface]),
+
+    Policy(id: 33,
+           text: "Trains that work",
+           type: .infrastructure,
+           parties: [.binface]),
+
+    Policy(id: 34,
+           text: "Reintroduce Ceefax",
+           additionalInfo: """
+           Ceefax was the world’s first teletext information service and a forerunner to the current BBC Red Button service.
+           """,
+           type: .infrastructure,
+           parties: [.binface]),
+
+    Policy(id: 35,
+           text: "Children in Need to finally get round to fixing Pudsey’s eye",
+           type: .infrastructure,
+           parties: [.binface]),
+
+    Policy(id: 36,
+           text: "Traffic on Northallerton High Street to be fixed by a new space bridge, bypassing both level crossings",
+           type: .infrastructure,
+           parties: [.binface]),
+
+    Policy(id: 37,
+           text: "European countries to be invited to join the UK, creating a new ‘Union of Europe’",
+           type: .foreignAffairs,
+           parties: [.binface]),
+
+    Policy(id: 38,
+           text: "Wallace and Gromit to be knighted, for services to Wensleydale",
+           type: .constitutional,
+           parties: [.binface]),
+
+    Policy(id: 39,
+           text: "Build at least one affordable house",
+           type: .families,
+           parties: [.binface]),
+
+    Policy(id: 40,
+           text: "Croissants to be price-capped at £1.10 and 99 flakes to cost 99p",
+           type: .economy,
+           parties: [.binface]),
+
+    Policy(id: 41,
+           text: "National Yorkshire Pudding Day to be a bank holiday (except for banks)",
+           type: .economy,
+           parties: [.binface]),
+
+    Policy(id: 42,
+           text: "Ban loud snacks from cinemas and theatres",
+           type: .families,
+           parties: [.binface]),
+
+    Policy(id: 43,
+           text: "Pensions to be double-locked, but with a little extra chain on the side",
+           type: .economy,
+           parties: [.binface]),
+
+    Policy(id: 44,
+           text: "Claudia Winkleman’s fringe to be Grade 1-listed",
+           type: .constitutional,
+           parties: [.binface]),
+
+    Policy(id: 45,
+           text: "A new series of Gladiators to feature '90s Gladiators against age-appropriate contenders",
+           type: .constitutional,
+           parties: [.binface]),
+
+    Policy(id: 46,
+           text: "Minsters' pay to be tied to that of nurses for the next 100 years",
+           type: .economy,
+           parties: [.binface]),
+
+    Policy(id: 47,
+           text: "Shops that play Christmas music before December to be closed down and turned into public libraries",
+           type: .economy,
+           parties: [.binface]),
+
+    Policy(id: 48,
+           text: "To combat the UK’s increasingly wet climate, all British citizens to be offered stilts",
+           type: .environment,
+           parties: [.binface]),
+
+    Policy(id: 49,
+           text: "Ban on speakerphones on public transport. Offenders to be forced to live with Matt Hancock for a year",
+           type: .rights,
+           parties: [.binface]),
+
+    Policy(id: 50,
+           text: "The mini golf course at Richmond swimming pool to host the open championship",
+           type: .economy,
+           parties: [.binface]),
+
+    Policy(id: 51,
+           text: "MPs to live in the area they wish to serve for 4 years before election, to improve local representation",
+           type: .constitutional,
+           parties: [.binface]),
+
+    Policy(id: 52,
+           text: "The hand dryer in the gents’ urinals at The Crown & Treaty, Uxbridge to be moved to a more sensible position.",
+           type: .infrastructure,
+           parties: [.binface]),
+
+    Policy(id: 53,
+           text: "Count Binface to represent the uk at eurovision",
+           type: .foreignAffairs,
+           parties: [.binface])
 ]
 // swiftlint:enable line_length
