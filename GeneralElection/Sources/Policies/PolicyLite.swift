@@ -2,14 +2,14 @@ import Foundation
 import Parties
 
 public struct PolicyLite: Codable {
-    public let id: Int
+    public let id: UUID
     public let text: String
     public let additionalInfo: String?
 
     public let type: PolicyType
     public let parties: [Party]
 
-    public init(id: Int,
+    public init(id: UUID,
                 text: String,
                 additionalInfo: String? = nil,
                 type: PolicyType,

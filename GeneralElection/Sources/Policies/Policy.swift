@@ -1,16 +1,17 @@
+import Foundation
 import Parties
 import SwiftData
 
 @Model
 public final class Policy {
-    @Attribute(.unique) public let id: Int
+    @Attribute(.unique) public let id: UUID
     public let text: String
     public let additionalInfo: String?
 
     public let type: PolicyType
     public let parties: [Party]
 
-    public init(id: Int,
+    public init(id: UUID,
                 text: String,
                 type: PolicyType,
                 additionalInfo: String?,
