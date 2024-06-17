@@ -12,6 +12,10 @@ struct Policies: ParsableCommand {
         let url = URL(fileURLWithPath: path)
             .appendingPathComponent(output)
 
+        (0...20).forEach { _ in
+            print(UUID().uuidString)
+        }
+        
         let encoder = JSONEncoder()
         try encoder
             .encode(policies)

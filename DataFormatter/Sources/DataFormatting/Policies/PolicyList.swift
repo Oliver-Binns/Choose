@@ -420,6 +420,86 @@ let policies: [PolicyLite] = [
            Section 21 allows landlords in England and Wales to evict tenants without providing a reason.
            """,
            type: .rights,
-           parties: [.labour])
-].shuffled()
-// swiftlint:enable line_length file_length
+           parties: [.labour]),
+    
+    Policy(id: "E3798712-F588-4C55-9E0B-A7643403FAA4",
+           text: "Lower the voting age to 16",
+           type: .rights,
+           parties: [.labour]),
+    
+    Policy(id: "EBC431EA-00BE-4F5D-8968-11B982FB7891",
+           text: "Ban advertising junk food to children along with the sale of high-caffeine energy drinks to under-16s",
+           type: .rights,
+           parties: [.labour]),
+    
+    Policy(id: "A624EC28-2292-4DD7-856B-5274FD93AB54",
+           text: "Set up Great British Energy, a publicly-owned clean power company",
+           additionalInfo: """
+           Great British Energy aims to cut bills for good and boost energy security, paid for by a windfall tax on oil and gas giants.
+           """,
+           type: .environment,
+           parties: [.labour]),
+    
+    Policy(id: "0B15D291-62A6-4AC0-BE0D-EAFB174D8809",
+           text: "Recruit 6,500 new teachers in key subjects",
+           additionalInfo: """
+           New teachers in key subjects will aim to prepare children for life, work and the future, paid for by ending tax breaks for private schools.
+           """,
+           type: .environment,
+           parties: [.labour]),
+    
+    Policy(id: "E159510B-FB3F-4F07-AFCC-5A01934AD366",
+           text: "No increases to national insurance, income tax or VAT",
+           type: .economy,
+           parties: [.labour]),
+    
+    Policy(id: "7E691212-5BF1-4C32-B942-5E5650FB3BBB",
+           text: "Fix an additional 1 million potholes per year across England",
+           additionalInfo: """
+           This will be funded by deferring the A27 bypass.
+           """,
+           type: .economy,
+           parties: [.labour]),
+    
+    Policy(id: "1D797544-A723-499C-99F5-3E0E36003B1F",
+           text: "Reforming the railways and bring them into public ownership",
+           additionalInfo: """
+           Railways will be brought back into public ownership as contracts with existing operators expire or are broken through a failure to deliver.
+           """,
+           type: .infrastructure,
+           parties: [.labour]),
+    
+    Policy(id: "83AE5B91-E209-49F8-9E9A-5C0FE558E248",
+           text: "Build 1.5 million new homes",
+           type: .families,
+           parties: [.labour, .conservatives]),
+    
+    Policy(id: "F804DBC6-9BA3-493F-BAA3-77EAF01D6DE6",
+           text: "Put failing water companies under special measures to clean up our water",
+           additionalInfo: """
+           Give regulators new powers to block the payment of bonuses to executives who pollute our waterways.
+           
+           Bring criminal charges against persistent law breakers.
+           """,
+           type: .environment,
+           parties: [.labour]),
+    
+    Policy(id: "8BB4EDA1-80BB-4129-8FC3-02D399D06D38",
+           text: "Ban trail hunting and the import of hunting trophies",
+           type: .environment,
+           parties: [.labour]),
+    
+    Policy(id: "4EBE8B36-9648-49DD-97F7-AFC6F0B352E6",
+           text: "Introduce new laws to crack down on puppy smuggling",
+           type: .environment,
+           parties: [.labour, .conservatives, .liberalDemocrats]),
+    
+    Policy(id: "2D43A691-E746-44E2-A88C-308152010977",
+           text: "Ban so-called conversion therapy",
+           additionalInfo: """
+           "So-called conversion therapy" refers to practices aimed at changing an individual's sexual orientation or gender identity.
+           """,
+           type: .rights,
+           parties: [.labour, .liberalDemocrats])
+]
+// swiftlint:enable line_length
