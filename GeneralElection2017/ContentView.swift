@@ -17,8 +17,6 @@ struct ContentView: View {
             constituencyViewModel.selectedConstituency == nil
         }, set: { _ in })
     }
-    
-    
 
     var body: some View {
         if constituencyViewModel.isLoading {
@@ -42,14 +40,14 @@ struct ContentView: View {
                 }
         }
     }
-    
+
     @MainActor
     func updatePolicies() {
         withObservationTracking {
             do {
                 let hiddenPolicies = matchViewModel.opinions.values.reduce(Set<UUID>()) { $1.union($0) }
                 let availableParties = constituencyViewModel.selectedConstituency?.candidates.map(\.party) ?? []
-                
+
                 try policyViewModel.refreshPolicyList(for: Set(availableParties), hiding: hiddenPolicies)
             } catch {
                 assertionFailure("error refreshing policies: \(error)")

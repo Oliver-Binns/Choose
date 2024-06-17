@@ -32,7 +32,11 @@ extension ConstituencyViewModel {
 extension PolicyViewModel {
     convenience init() {
         let context = ModelContainer.preview
-        try! self.init(modelContext: context.mainContext)
+        do {
+            try self.init(modelContext: context.mainContext)
+        } catch {
+            preconditionFailure("unexpected failure getting model context")
+        }
     }
 }
 
@@ -40,7 +44,11 @@ extension PolicyViewModel {
 extension MatchViewModel {
     convenience init() {
         let context = ModelContainer.preview
-        try! self.init(modelContext: context.mainContext)
+        do {
+            try self.init(modelContext: context.mainContext)
+        } catch {
+            preconditionFailure("unexpected failure getting model context")
+        }
     }
 }
 #endif

@@ -5,9 +5,7 @@ import SwiftData
 @Observable
 public final class MatchViewModel<Item: MatchableItem> {
     private let modelContext: ModelContext
-
-    public var opinions: [Opinion: Set<UUID>] = [:]
-    
+    public private(set) var opinions: [Opinion: Set<UUID>] = [:]
 
     public init(modelContext: ModelContext) throws {
         self.modelContext = modelContext
@@ -20,7 +18,7 @@ public final class MatchViewModel<Item: MatchableItem> {
 
     public func decide(opinion: Opinion, for item: Item) throws {
         opinions[opinion, default: []].insert(item.id)
-        
+
         let match = Match(id: item.id, opinion: opinion)
         modelContext.insert(match)
         try modelContext.save()

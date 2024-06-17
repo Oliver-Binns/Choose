@@ -18,9 +18,9 @@ struct MainWindow: View {
     @State var policyViewModel: PolicyViewModel?
     @State var constituencyViewModel: ConstituencyViewModel?
     @State var matchViewModel: MatchViewModel<Policy>?
-    
+
     @Environment(\.modelContext) private var modelContext
-    
+
     var body: some View {
         NavigationStack {
             if let policyViewModel,
