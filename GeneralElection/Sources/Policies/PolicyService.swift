@@ -59,5 +59,5 @@ final actor PolicyService: ModelActor {
         try loadFromFile()
         let (data, _) = try await session.data(from: .policies)
         try loadModels(from: data)
-    }
+     }
 }

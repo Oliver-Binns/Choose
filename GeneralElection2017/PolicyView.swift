@@ -122,7 +122,12 @@ struct PolicyView: View {
 
     @MainActor
     private func setOpinion() {
-        matchService.decide(opinion: opinion, for: policy)
+        do {
+            try matchService.decide(opinion: opinion, for: policy)
+            offset = .zero
+        } catch {
+            print("error occurred", error)
+        }
     }
 }
 

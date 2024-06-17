@@ -7,13 +7,13 @@ public struct PolicyLite: Codable {
     public let additionalInfo: String?
 
     public let type: PolicyType
-    public let parties: [Party]
+    public let parties: Set<Party>
 
     public init(id: UUID,
                 text: String,
                 additionalInfo: String? = nil,
                 type: PolicyType,
-                parties: [Party]) {
+                parties: Set<Party>) {
         self.id = id
         self.text = text
         self.additionalInfo = additionalInfo

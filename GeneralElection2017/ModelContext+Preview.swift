@@ -1,6 +1,7 @@
 #if DEBUG
 import Choose
 import Constituencies
+import Parties
 import Policies
 import SwiftData
 
@@ -31,7 +32,7 @@ extension ConstituencyViewModel {
 extension PolicyViewModel {
     convenience init() {
         let context = ModelContainer.preview
-        self.init(modelContext: context.mainContext)
+        try! self.init(modelContext: context.mainContext)
     }
 }
 
@@ -39,7 +40,7 @@ extension PolicyViewModel {
 extension MatchViewModel {
     convenience init() {
         let context = ModelContainer.preview
-        self.init(modelContext: context.mainContext)
+        try! self.init(modelContext: context.mainContext)
     }
 }
 #endif
