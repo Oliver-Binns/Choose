@@ -4,7 +4,7 @@ import Policies
 
 typealias Policy = PolicyLite
 
-// swiftlint:disable line_length
+// swiftlint:disable line_length file_length
 let policies: [PolicyLite] = [
     Policy(id: "4303665D-F4B0-41A5-ABB3-790677B5DD7E",
            text: "Cut national insurance by 2p",
@@ -87,6 +87,9 @@ let policies: [PolicyLite] = [
 
     Policy(id: "60C25622-8440-4B1E-8936-B44BD7B276DE",
            text: "Deport illegal immigrants to Rwanda",
+           additionalInfo: """
+           The Rwanda deportation scheme involves the UK government sending asylum seekers to Rwanda for processing and settlement, aiming to deter illegal immigration and human trafficking.
+           """,
            type: .economy,
            parties: [.conservatives]),
 
@@ -294,6 +297,209 @@ let policies: [PolicyLite] = [
     Policy(id: "E8BDA16F-EDD9-482F-9528-3F2A21920B89",
            text: "Count Binface to represent the uk at eurovision",
            type: .foreignAffairs,
-           parties: [.binface])
-].shuffled()
+           parties: [.binface]),
+
+    Policy(id: "19A4E401-A385-49B0-B461-ACDE5F559779",
+           text: "Abolish IR35 rules for contractors",
+           type: .economy,
+           parties: [.reform]),
+
+    Policy(id: "6B4C3C36-9A1B-44F0-9A5E-AF0C8821832A",
+           text: "Leave the European Convention on Human Rights",
+           type: .rights,
+           parties: [.reform]),
+
+    Policy(id: "FA530698-6849-481D-9897-917535310B76",
+           text: "Reduce the main corporation tax rate from 25% to 20%",
+           type: .economy,
+           parties: [.reform]),
+
+    Policy(id: "E7875BF4-E391-4519-97F8-35509F7A6980",
+           text: "All frontline NHS and social care staff to pay zero basic rate tax for 3 years",
+           type: .healthSocialCare,
+           parties: [.reform]),
+
+    Policy(id: "73F85781-5483-4C41-8326-BC2D17282B73",
+           text: "Give patients vouchers for private healthcare if they can't see a GP within 3 days",
+           type: .healthSocialCare,
+           parties: [.reform]),
+
+    Policy(id: "D7C61AA0-628A-408F-BBE7-7EBC4CDA144B",
+           text: "Scrap Net Zero targets and Related Subsidies",
+           type: .environment,
+           parties: [.reform]),
+
+    Policy(id: "7A80AC76-A3F5-47BA-B8DC-A0BB55C75421",
+           text: "Scrap interest on student loans and extend loan repayment periods to 45 years",
+           type: .education,
+           parties: [.reform]),
+
+    Policy(id: "C417DD41-636D-4124-BAC7-C94B063F2593",
+           text: "Ban transgender ideology in primary and secondary schools",
+           type: .education,
+           parties: [.reform]),
+
+    Policy(id: "F4C75FE2-AEBC-43AB-81D9-67F90CD9D8E1",
+           text: "Ban critical race theory in primary and secondary schools",
+           type: .education,
+           parties: [.reform]),
+
+    Policy(id: "CC314C6D-447B-4F82-B649-34AFE27CE13B",
+           text: "Abandon the Windsor Framework",
+           additionalInfo: """
+           The Windsor Framework simplifies trade rules between Northern Ireland and the rest of the UK while preserving Northern Ireland's access to the EU market.
+           """,
+           type: .foreignAffairs,
+           parties: [.reform]),
+
+    Policy(id: "3B4248A4-5DDE-4A87-9C14-8CAE6395BFF8",
+           text: "Mandate single sex spaces",
+           additionalInfo: "Public toilets and changing areas must provide single sex facilities, including in schools.",
+           type: .foreignAffairs,
+           parties: [.reform]),
+
+    Policy(id: "3473F2D0-0101-4610-B521-DC670A4AB00C",
+           text: "Ban all ULEZ and Low Traffic Neighbourhoods",
+           type: .foreignAffairs,
+           parties: [.reform]),
+
+    Policy(id: "F15F3590-1202-4C2E-9776-7F2C0A9DA411",
+           text: "Stop postal voting except for the elderly, disabled or those who can’t leave their homes.",
+           type: .constitutional,
+           parties: [.reform]),
+
+    Policy(id: "5D70A479-5519-4F4D-97F8-E9F4408F4F8E",
+           text: "Introduce proportional representation voting for the House of Commons",
+           additionalInfo: """
+           Proportional representation allocates legislative seats based on vote percentages, aiming for fairness, but it can lead to unstable coalition governments.
+           """,
+           type: .constitutional,
+           parties: [.reform]),
+
+    Policy(id: "73947F6B-A904-4667-AD25-D8C06940513F",
+           text: "Keep the corporation tax rate at 25%",
+           type: .economy,
+           parties: [.labour, .conservatives]),
+
+    Policy(id: "4BBF96B4-0EC6-43F4-8328-BF920C77FE5F",
+           text: "Double the number of NHS CT and MRI scanners",
+           type: .healthSocialCare,
+           parties: [.labour]),
+
+    Policy(id: "69A20F2D-E630-4594-8D02-6AF1D12AA2F3",
+           text: "Free breakfast clubs in every primary school",
+           type: .education,
+           parties: [.labour]),
+
+    Policy(id: "E64EE420-506B-4FF7-B96E-9E1741822213",
+           text: "Apply VAT and business rates to private school fees",
+           type: .education,
+           parties: [.labour]),
+
+    Policy(id: "AE7781B9-AE25-429A-91E7-0EE83345054E",
+           text: "Scrap the Rwanda deportation scheme",
+           additionalInfo: """
+           The Rwanda deportation scheme involves the UK government sending asylum seekers to Rwanda for processing and settlement, aiming to deter illegal immigration and human trafficking.
+           """,
+           type: .economy,
+           parties: [.labour]),
+
+    Policy(id: "06197729-1718-4F9E-9DB3-8BC010624077",
+           text: "Invest £855m in HMRC to reduce tax avoidance",
+           type: .economy,
+           parties: [.labour]),
+
+    Policy(id: "5B258ACA-82EA-497D-8338-F0CDB3D0FFB9",
+           text: "Open an additional 3,000 nurseries",
+           type: .families,
+           parties: [.labour]),
+
+    Policy(id: "A87B3138-55B7-4B83-B32C-5644588422BB",
+           text: "Abolish Section 21 ‘no fault’ evictions",
+           additionalInfo: """
+           Section 21 allows landlords in England and Wales to evict tenants without providing a reason.
+           """,
+           type: .rights,
+           parties: [.labour]),
+
+    Policy(id: "E3798712-F588-4C55-9E0B-A7643403FAA4",
+           text: "Lower the voting age to 16",
+           type: .rights,
+           parties: [.labour]),
+
+    Policy(id: "EBC431EA-00BE-4F5D-8968-11B982FB7891",
+           text: "Ban advertising junk food to children along with the sale of high-caffeine energy drinks to under-16s",
+           type: .rights,
+           parties: [.labour]),
+
+    Policy(id: "A624EC28-2292-4DD7-856B-5274FD93AB54",
+           text: "Set up Great British Energy, a publicly-owned clean power company",
+           additionalInfo: """
+           Great British Energy aims to cut bills for good and boost energy security, paid for by a windfall tax on oil and gas giants.
+           """,
+           type: .environment,
+           parties: [.labour]),
+
+    Policy(id: "0B15D291-62A6-4AC0-BE0D-EAFB174D8809",
+           text: "Recruit 6,500 new teachers in key subjects",
+           additionalInfo: """
+           New teachers in key subjects will aim to prepare children for life, work and the future, paid for by ending tax breaks for private schools.
+           """,
+           type: .environment,
+           parties: [.labour]),
+
+    Policy(id: "E159510B-FB3F-4F07-AFCC-5A01934AD366",
+           text: "No increases to national insurance, income tax or VAT",
+           type: .economy,
+           parties: [.labour]),
+
+    Policy(id: "7E691212-5BF1-4C32-B942-5E5650FB3BBB",
+           text: "Fix an additional 1 million potholes per year across England",
+           additionalInfo: """
+           This will be funded by deferring the A27 bypass.
+           """,
+           type: .economy,
+           parties: [.labour]),
+
+    Policy(id: "1D797544-A723-499C-99F5-3E0E36003B1F",
+           text: "Reforming the railways and bring them into public ownership",
+           additionalInfo: """
+           Railways will be brought back into public ownership as contracts with existing operators expire or are broken through a failure to deliver.
+           """,
+           type: .infrastructure,
+           parties: [.labour]),
+
+    Policy(id: "83AE5B91-E209-49F8-9E9A-5C0FE558E248",
+           text: "Build 1.5 million new homes",
+           type: .families,
+           parties: [.labour, .conservatives]),
+
+    Policy(id: "F804DBC6-9BA3-493F-BAA3-77EAF01D6DE6",
+           text: "Put failing water companies under special measures to clean up our water",
+           additionalInfo: """
+           Give regulators new powers to block the payment of bonuses to executives who pollute our waterways.
+
+           Bring criminal charges against persistent law breakers.
+           """,
+           type: .environment,
+           parties: [.labour]),
+
+    Policy(id: "8BB4EDA1-80BB-4129-8FC3-02D399D06D38",
+           text: "Ban trail hunting and the import of hunting trophies",
+           type: .environment,
+           parties: [.labour]),
+
+    Policy(id: "4EBE8B36-9648-49DD-97F7-AFC6F0B352E6",
+           text: "Introduce new laws to crack down on puppy smuggling",
+           type: .environment,
+           parties: [.labour, .conservatives, .liberalDemocrats]),
+
+    Policy(id: "2D43A691-E746-44E2-A88C-308152010977",
+           text: "Ban so-called conversion therapy",
+           additionalInfo: """
+           "So-called conversion therapy" refers to practices aimed at changing an individual's sexual orientation or gender identity.
+           """,
+           type: .rights,
+           parties: [.labour, .liberalDemocrats])
+]
 // swiftlint:enable line_length
