@@ -54,4 +54,23 @@ extension PolicyServiceTests {
         XCTAssertEqual(policy.parties, [.liberalDemocrats, .snp])
         XCTAssertEqual(policy.type, .foreignAffairs)
     }
+
+    func testAddPoliciesWithEmptyData() async throws {
+        let data = try JSONEncoder()
+            .encode([PolicyLite]())
+
+        MockURLProtocol.requestHandler = { _ in
+            (.success, data)
+        }
+
+        try await sut.loadAllPolicies()
+
+        let descriptor = FetchDescriptor<Policy>(sortBy: [
+            SortDescriptor(\.id, order: .forward)
+        ])
+        let policies = try modelContext
+            .fetch(descriptor)
+
+        XCTAssertEqual(policies.count, 10)
+    }
 }

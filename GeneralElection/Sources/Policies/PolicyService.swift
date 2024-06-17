@@ -31,14 +31,14 @@ final actor PolicyService: ModelActor {
         let decoder = JSONDecoder()
         let policies = try decoder.decode([PolicyLite].self, from: data)
             .map(Policy.init)
-        
+
         guard !policies.isEmpty else {
             // only update stored policies if we have new ones to replace with
             return
         }
-        
+
         try modelContext.delete(model: Policy.self)
-        
+
         policies.forEach {
             modelContext.insert($0)
         }
