@@ -30,13 +30,13 @@ public final class PolicyViewModel {
         try policies.append(contentsOf: findPolicies(count: toAdd, hiding: hiddenPolicies, parties: parties))
     }
 
-    private func findPolicies(count: Int = 5,
+    private func findPolicies(count: Int,
                               hiding hiddenPolicies: Set<UUID>,
                               parties: Set<Party>) throws -> [Policy] {
         var searched: Set<UUID> = Set(policies.map(\.id))
 
         var descriptor = FetchDescriptor<Policy>()
-        descriptor.fetchLimit = 5
+        descriptor.fetchLimit = count
         descriptor.predicate = #Predicate {
             !hiddenPolicies.contains($0.id) &&
             !searched.contains($0.id)
@@ -44,7 +44,7 @@ public final class PolicyViewModel {
 
         var policies: [Policy] = []
 
-        while policies.count < 5 {
+        while policies.count < count {
             let possiblePolicies = try modelContext.fetch(descriptor)
             // ensure they don't get searched again
             possiblePolicies.map(\.id).forEach { searched.insert($0) }

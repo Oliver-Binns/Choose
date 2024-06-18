@@ -295,7 +295,7 @@ let policies: [PolicyLite] = [
            parties: [.binface]),
 
     Policy(id: "E8BDA16F-EDD9-482F-9528-3F2A21920B89",
-           text: "Count Binface to represent the uk at eurovision",
+           text: "Count Binface to represent the UK at Eurovision",
            type: .foreignAffairs,
            parties: [.binface]),
 
