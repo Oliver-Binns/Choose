@@ -27,10 +27,7 @@ public final class PolicyViewModel {
         policies = policies.filter { !hiddenPolicies.contains($0.id) }
 
         let toAdd = 5 - policies.count
-        print("searching for: ", toAdd)
-
         let nextPolicies = try findPolicies(count: toAdd, hiding: hiddenPolicies, parties: parties)
-        print("adding: ", nextPolicies.count)
         policies.append(contentsOf: nextPolicies)
     }
 
