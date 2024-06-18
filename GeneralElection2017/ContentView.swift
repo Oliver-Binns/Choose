@@ -1,6 +1,7 @@
 import Choose
 import Constituencies
 import Policies
+import StoreKit
 import SwiftUI
 
 struct ContentView: View {
@@ -10,6 +11,9 @@ struct ContentView: View {
 
     @AppStorage("OnboardingComplete")
     private var onboardingComplete: Bool = false
+
+    @Environment(\.requestReview)
+    private var requestReview
 
     @MainActor
     private var isFlipped: Binding<Bool> {
@@ -56,6 +60,11 @@ struct ContentView: View {
             Task {
                 await MainActor.run {
                     updatePolicies()
+
+                    if matchViewModel
+                        .opinions[.agree, default: []].count == 50 {
+                        requestReview()
+                    }
                 }
             }
         }
