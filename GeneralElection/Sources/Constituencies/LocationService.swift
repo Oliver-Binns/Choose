@@ -1,9 +1,13 @@
 import CoreLocation
 
-public enum LocationError: Error {
+public enum LocationError: String, Error {
     case geocodeFailed
     case outsideUK
     case permissionDenied
+}
+
+extension LocationError: CustomStringConvertible {
+    public var description: String { rawValue }
 }
 
 final class LocationService: NSObject {
@@ -33,6 +37,7 @@ final class LocationService: NSObject {
 
         return try await withCheckedThrowingContinuation { continuation in
             self.locationContinuation = continuation
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
             locationManager.requestLocation()
         }
     }
