@@ -9,13 +9,13 @@ struct ConstituencySelection: View {
 
     @State
     private var selectedConstituency: Constituency?
-    
+
     @State
     private var isLoadingLocation: Bool = false
 
     @State
     private var errorMessage: Bool = false
-    
+
     @State
     private var showAttribution: Bool = false
 
@@ -27,7 +27,7 @@ struct ConstituencySelection: View {
                         withAnimation {
                             isLoadingLocation = true
                         }
-                        
+
                         do {
                             let constituency = try await viewModel.getConstituencyFromLocation()
                             withAnimation {
@@ -36,7 +36,7 @@ struct ConstituencySelection: View {
                         } catch {
                             errorMessage = true
                         }
-                        
+
                         isLoadingLocation = false
                     }
                 }
@@ -45,11 +45,11 @@ struct ConstituencySelection: View {
                 .fontWeight(.semibold)
                 .clipShape(.rect(cornerRadius: 4))
                 .disabled(isLoadingLocation)
-                
+
                 if isLoadingLocation {
                     ProgressView()
                 } else {
-                    Button{
+                    Button {
                         showAttribution.toggle()
                     } label: {
                         Label("Info", systemImage: "info.circle.fill")
@@ -80,7 +80,7 @@ struct ConstituencySelection: View {
         } message: {
             Text("""
             Could not find your constituency from your location.
-            
+
             Please try again later or select manually.
             """)
         }
@@ -97,9 +97,7 @@ struct ConstituencySelection: View {
             Constituency location data service provided by TheyWorkForYou.
             """)
         }
-
     }
-
 }
 
 #if DEBUG

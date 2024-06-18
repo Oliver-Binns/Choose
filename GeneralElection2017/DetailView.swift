@@ -4,7 +4,7 @@ import SwiftUI
 struct DetailView: View {
     let candidate: Candidate
     let partyMapping: PartyMapping
-    
+
     @State private var displayAttribution: Bool = false
 
     var body: some View {
