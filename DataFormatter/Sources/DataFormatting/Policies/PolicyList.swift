@@ -420,7 +420,7 @@ let policies: [PolicyLite] = [
            Section 21 allows landlords in England and Wales to evict tenants without providing a reason.
            """,
            type: .rights,
-           parties: [.labour]),
+           parties: [.labour, .green, .liberalDemocrats]),
 
     Policy(id: "E3798712-F588-4C55-9E0B-A7643403FAA4",
            text: "Lower the voting age to 16",
@@ -467,7 +467,7 @@ let policies: [PolicyLite] = [
            Railways will be brought back into public ownership as contracts with existing operators expire or are broken through a failure to deliver.
            """,
            type: .infrastructure,
-           parties: [.labour]),
+           parties: [.labour, .green]),
 
     Policy(id: "83AE5B91-E209-49F8-9E9A-5C0FE558E248",
            text: "Build 1.5 million new homes",
@@ -567,16 +567,181 @@ let policies: [PolicyLite] = [
            Families on Universal Credit or Child Tax Credit can currently only get financial support for up to two children.
            """,
            type: .families,
-           parties: [.liberalDemocrats]),
+           parties: [.liberalDemocrats, .green]),
 
     Policy(id: "274539D7-F12F-40F7-9DB5-0A4E699C7987",
            text: "Rejoin the EU Single Market",
            additionalInfo: """
-           The EU Single Market is a trade agreement where goods, services, capital, and people can move freely without barriers like tariffs or restrictions.
+           The EU Single Market allows free movement of goods, services, people, and capital.
+           The EU Customs Union applies common tariffs on external imports.
 
-           Countries such as Norway and Switzerland are members of the Single Market, but not the EU.
+           Norway is a member of the EU Single Market but not the Customs Union.
            """,
-           type: .families,
-           parties: [.liberalDemocrats])
+           type: .constitutional,
+           parties: [.liberalDemocrats]),
+    
+    Policy(id: "FD61090F-A82D-4FF8-83AC-6195792DF486",
+           text: "Scrap the requirement for Voter ID",
+           additionalInfo: """
+           UK voters are currently requirement to show photo ID before they can participate in elections.
+           """,
+           type: .constitutional,
+           parties: [.liberalDemocrats]),
+    
+    Policy(id: "6DAD2756-004A-4945-A73D-6D664A9D1685",
+           text: "Reform the House of Lords with a proper democratic mandate",
+           additionalInfo: """
+           The House of Lords is the upper house of Parliament in the UK, composed of appointed and hereditary members.
+           """,
+           type: .constitutional,
+           parties: [.liberalDemocrats]),
+
+    Policy(id: "316BD41A-6124-4491-94E9-28BE0BA76784",
+           text: "Cap donations to political parties",
+           type: .constitutional,
+           parties: [.liberalDemocrats]),
+
+    Policy(id: "1E6D313D-960F-4239-A5C0-23C55B0D2454",
+           text: "Maintain the UK's nuclear deterrent",
+           additionalInfo: """
+           The UK's current nuclear deterrent is the Trident programme, consisting of four Vanguard-class submarines.
+           """,
+           type: .defence,
+           parties: [.liberalDemocrats, .labour, .conservatives]),
+
+    Policy(id: "2F196CDF-B988-4351-96E7-54F622F0CCD0",
+           text: "Cancel the Trident nuclear deterrent programme",
+           additionalInfo: """
+           The UK's current nuclear deterrent is the Trident programme, consisting of four Vanguard-class submarines.
+           """,
+           type: .defence,
+           parties: [.green]),
+
+    Policy(id: "807553DA-A769-43E7-82AF-9507A8F24C6A",
+           text: "End strike action in the NHS by meeting junior doctor's demands for a 35% pay rise",
+           additionalInfo: """
+           Junior doctors in the UK have been on strike intermittently since March 2023 in response to long-standing issues over pay and working conditions.
+
+           They are calling for pay restoration after years of below-inflation increases and have recently voted to extend the strike action for another six months.
+           """,
+           type: .healthSocialCare,
+           parties: [.green]),
+
+    Policy(id: "26C10D65-0AB5-4566-9FD2-243A5BD3BEDC",
+           text: "Legalise assisted dying for terminally ill patients",
+           additionalInfo: """
+           Allowing people to choose to end their lives to avoid prolonging unnecessary suffering, if this is their clear and settled will.
+
+           Proper safeguards would need to be put in place.
+           """,
+           type: .healthSocialCare,
+           parties: [.green]),
+
+    Policy(id: "BD20CD84-9ABE-4739-B692-C0425F515220",
+           text: "Scrap university tuition fees",
+           type: .education,
+           parties: [.green]),
+
+    Policy(id: "080F26D9-AD78-49A5-8574-46287ABAD28A",
+           text: "Raise the rate of National Insurance paid by those earning over £50,270",
+           additionalInfo: """
+           Raise the National Insurance higher rate from 2% to 8% for those earning over £50,270 a year.
+
+           This is about 15% of the population.
+           """,
+           type: .economy,
+           parties: [.green]),
+
+    Policy(id: "586369B9-F462-4779-8792-FA8F2190550C",
+           text: "Aim to reach net zero by 2040",
+           type: .environment,
+           parties: [.green]),
+
+    Policy(id: "09F5FB32-0A6B-42A5-90C8-B9427E7279AE",
+           text: "Rejoin the EU Customs Union",
+           additionalInfo: """
+           The EU Customs Union applies common tariffs on external imports.
+           The EU Single Market allows free movement of goods, services, people, and capital.
+
+           Turkey is a member of the EU Customs Union but not the Single Market.
+           """,
+           type: .constitutional,
+           parties: [.liberalDemocrats]),
+
+    Policy(id: "F02CE7F0-4986-4500-B1CB-1861E67E0285",
+           text: "End military cooperation with Israel",
+           type: .defence,
+           parties: [.green]),
+
+    Policy(id: "E8FA48F6-9FB3-4B57-8004-05B0D559C16E",
+           text: "Support Israel's right to defend itself",
+           type: .defence,
+           parties: [.conservatives]),
+
+    Policy(id: "BCDDFBB5-3DFC-4D62-8249-AD8DBC4C8E3E",
+           text: "Support Israel's right to defend itself",
+           type: .defence,
+           parties: [.conservatives]),
+
+    Policy(id: "7DA5F549-2CF8-4F63-A1B0-978A71656E4C",
+           text: "Introduce free personal care",
+           additionalInfo: """
+           Provide essential daily care services, such as help with washing and dressing, ensuring care is based on need rather than the ability to pay.
+
+           This aims to alleviate the burden on families and improve the quality of life for those requiring care.
+           """,
+           type: .healthSocialCare,
+           parties: [.liberalDemocrats, .green]),
+
+    Policy(id: "F4A265D5-85EE-4882-92D8-9AE5B69BAE50",
+           text: "Add VAT to airplane fuel",
+           type: .environment,
+           parties: [.green]),
+
+    Policy(id: "2DD022FB-FC70-491A-862F-FCF8418FC5AC",
+           text: "Ban short-haul flights",
+           additionalInfo: """
+           Short-haul flights will be banned for journeys where a direct rail option is available.
+
+           This applies to routes where the train journey takes less than three hours.
+           """,
+           type: .environment,
+           parties: [.green, .liberalDemocrats]),
+
+
+    Policy(id: "45653D07-E657-438F-BA17-22A5538F7439",
+           text: "Introduce a frequent flyer levy",
+           additionalInfo: """
+           This would increase taxes for those that fly the most.
+           """,
+           type: .environment,
+           parties: [.green, .liberalDemocrats]),
+
+    Policy(id: "345ADA58-44FC-4580-8224-F9004908D018",
+           text: "Introduce maximum 10:1 pay ratios",
+           additionalInfo: """
+           This means that the highest-paid individual within an organisation cannot earn more than 10 times the amount earned by the lowest-paid individual in that same organisation.
+           """,
+           type: .economy,
+           parties: [.green, .liberalDemocrats]),
+
+    Policy(id: "7AFAAC6B-9ABC-4AAA-9921-FBE95EB9ACDA",
+           text: "Scrap the bedroom tax",
+           additionalInfo: """
+           The bedroom tax reduces housing benefit for social housing tenants with unused bedrooms.
+           """,
+           type: .economy,
+           parties: [.green, .liberalDemocrats]),
+
+    Policy(id: "6D92BABC-39AA-4005-8140-EEDE177B6642",
+           text: "Introducing a new Rights of Nature Act giving legal personhood to nature.",
+           additionalInfo: """
+           This means giving nature legal rights and protections similar to those of humans.
+
+           This might include rights to life, rights to clean water and air, and, protection from discrimination.
+           """,
+           type: .environment,
+           parties: [.green, .liberalDemocrats]),
 ]
+
 // swiftlint:enable line_length
