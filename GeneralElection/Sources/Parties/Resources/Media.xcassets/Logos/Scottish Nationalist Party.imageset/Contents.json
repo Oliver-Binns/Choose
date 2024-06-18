@@ -3,6 +3,16 @@
     {
       "filename" : "SNP.png",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "SNP 1.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {
