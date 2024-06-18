@@ -579,7 +579,7 @@ let policies: [PolicyLite] = [
            """,
            type: .constitutional,
            parties: [.liberalDemocrats]),
-    
+
     Policy(id: "FD61090F-A82D-4FF8-83AC-6195792DF486",
            text: "Scrap the requirement for Voter ID",
            additionalInfo: """
@@ -587,7 +587,7 @@ let policies: [PolicyLite] = [
            """,
            type: .constitutional,
            parties: [.liberalDemocrats]),
-    
+
     Policy(id: "6DAD2756-004A-4945-A73D-6D664A9D1685",
            text: "Reform the House of Lords with a proper democratic mandate",
            additionalInfo: """
@@ -708,7 +708,6 @@ let policies: [PolicyLite] = [
            type: .environment,
            parties: [.green, .liberalDemocrats]),
 
-
     Policy(id: "45653D07-E657-438F-BA17-22A5538F7439",
            text: "Introduce a frequent flyer levy",
            additionalInfo: """
@@ -741,7 +740,7 @@ let policies: [PolicyLite] = [
            This might include rights to life, rights to clean water and air, and, protection from discrimination.
            """,
            type: .environment,
-           parties: [.green, .liberalDemocrats]),
+           parties: [.green, .liberalDemocrats])
 ]
 
 // swiftlint:enable line_length
