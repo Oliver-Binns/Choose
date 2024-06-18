@@ -25,7 +25,7 @@ struct MainView: View {
         }
         .navigationTitle(navigationTitle)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
+            ToolbarItem(placement: .topBarLeading) {
                 Button {
                     constituencyService.selectedConstituency = nil
                 } label: {
@@ -33,7 +33,7 @@ struct MainView: View {
                 }
             }
 
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .topBarTrailing) {
                 Button {
                     do {
                         try matchService.reset()
