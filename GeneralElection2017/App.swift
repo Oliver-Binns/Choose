@@ -15,14 +15,33 @@ struct GeneralElection: App {
 }
 
 struct MainWindow: View {
+    @State var policyViewModel: PolicyViewModel?
+    @State var constituencyViewModel: ConstituencyViewModel?
+    @State var matchViewModel: MatchViewModel<Policy>?
+
     @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         NavigationStack {
-            ContentView()
-                .environment(PolicyViewModel(modelContext: modelContext))
-                .environment(ConstituencyViewModel(modelContext: modelContext))
-                .environment(MatchViewModel<Policy>(modelContext: modelContext))
+            if let policyViewModel,
+               let constituencyViewModel,
+               let matchViewModel {
+                ContentView()
+                    .environment(policyViewModel)
+                    .environment(constituencyViewModel)
+                    .environment(matchViewModel)
+            } else {
+                ProgressView()
+                    .onAppear {
+                        do {
+                            constituencyViewModel = ConstituencyViewModel(modelContext: modelContext)
+                            matchViewModel = try MatchViewModel(modelContext: modelContext)
+                            policyViewModel = try PolicyViewModel(modelContext: modelContext)
+                        } catch {
+                            assertionFailure("error occured: \(error)")
+                        }
+                    }
+            }
         }
     }
 }

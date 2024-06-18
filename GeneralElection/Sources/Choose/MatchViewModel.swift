@@ -5,36 +5,27 @@ import SwiftData
 @Observable
 public final class MatchViewModel<Item: MatchableItem> {
     private let modelContext: ModelContext
+    public private(set) var opinions: [Opinion: Set<UUID>] = [:]
 
-    public var unmatched: [Item] = []
-
-    public init(modelContext: ModelContext) {
+    public init(modelContext: ModelContext) throws {
         self.modelContext = modelContext
 
-        try? updatePolicies()
+        let matchedItems = try modelContext.fetch(FetchDescriptor<Match>())
+        matchedItems.forEach {
+            opinions[$0.opinion, default: []].insert($0.id)
+        }
     }
 
-    private func updatePolicies() throws {
-        let matchedItemCount = try modelContext
-            .fetchCount(FetchDescriptor<Match>())
+    public func decide(opinion: Opinion, for item: Item) throws {
+        opinions[opinion, default: []].insert(item.id)
 
-        var descriptor = FetchDescriptor<Item>(sortBy: Item.sortDescriptors)
-        descriptor.fetchOffset = matchedItemCount
-        descriptor.fetchLimit = 5
-        self.unmatched = try modelContext.fetch(descriptor)
-    }
-
-    public func decide(opinion: Opinion, for item: Item) {
         let match = Match(id: item.id, opinion: opinion)
         modelContext.insert(match)
-        try? modelContext.save()
-
-        try? updatePolicies()
+        try modelContext.save()
     }
 
     public func reset() throws {
         try modelContext.delete(model: Match.self)
-
-        try? updatePolicies()
+        opinions = [:]
     }
 }

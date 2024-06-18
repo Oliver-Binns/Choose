@@ -118,11 +118,18 @@ struct PolicyView: View {
         .offset(x: offset.width, y: min(0, offset.height))
         .opacity(opacity)
         .gesture(drag)
+        .onAppear {
+            offset = .zero
+        }
     }
 
     @MainActor
     private func setOpinion() {
-        matchService.decide(opinion: opinion, for: policy)
+        do {
+            try matchService.decide(opinion: opinion, for: policy)
+        } catch {
+            print("error occurred", error)
+        }
     }
 }
 

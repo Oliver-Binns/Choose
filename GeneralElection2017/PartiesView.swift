@@ -40,11 +40,8 @@ struct PartiesView: View {
     @Environment(\.modelContext)
     private var context
 
-    @Query(filter: #Predicate<Match> { $0.__opinion == "agree" })
-    private var agrees: [Match]
-
-    @Query(filter: #Predicate<Match> { $0.__opinion == "disagree" })
-    private var disagrees: [Match]
+    @Environment(MatchViewModel<Policy>.self)
+    private var matchService
 
     var body: some View {
         let (likedPolicies, dislikedPolicies) = policyOpinions
@@ -77,9 +74,12 @@ struct PartiesView: View {
         }
     }
 
+    @MainActor
     var policyOpinions: ([Policy], [Policy]) {
-        let likedPolicyIDs = agrees.map(\.id)
-        let dislikedPolicyIDs = disagrees.map(\.id)
+        let likedPolicyIDs = matchService
+            .opinions[.agree, default: []]
+        let dislikedPolicyIDs = matchService
+            .opinions[.disagree, default: []]
 
         do {
             let likedPredicate = #Predicate<Policy> { likedPolicyIDs.contains($0.id) }
