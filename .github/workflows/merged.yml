@@ -42,8 +42,8 @@ jobs:
           
       - name: Export API Key
         run: |
-          echo API_KEY=${{ secrets.API_KEY }} >> ../GeneralElection.xcconfig
-          
+          echo "API_KEY=${{ secrets.API_KEY }}" >> ../GeneralElection.xcconfig
+
       - name: Deploy
         run: fastlane deploy
         env:
